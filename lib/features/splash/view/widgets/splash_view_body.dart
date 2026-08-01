@@ -39,8 +39,8 @@ class SplashViewBody extends StatelessWidget {
       Get.to(
         HomeView(),
         transition: Transition.fadeIn,
-        curve: Curves.easeInOut,
-        duration: Duration(milliseconds: 800),
+        // curve: Curves.easeInOut,
+        duration: Duration(milliseconds: 500),
       );
       // Navigator.pushReplacement(
       //   context,
