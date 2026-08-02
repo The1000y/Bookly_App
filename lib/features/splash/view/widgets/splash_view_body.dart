@@ -1,9 +1,9 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:bookly_app/core/constants/app_images.dart';
 import 'package:bookly_app/core/constants/app_strings.dart';
-import 'package:bookly_app/features/home/view/home_view.dart';
+
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+import 'package:go_router/go_router.dart';
 
 class SplashViewBody extends StatelessWidget {
   const SplashViewBody({super.key});
@@ -22,7 +22,7 @@ class SplashViewBody extends StatelessWidget {
           SizedBox(height: 16),
           FadeInUp(
             onFinish: (direction) {
-              navigateHomeView();
+              navigateHomeView(context);
             },
 
             duration: Duration(milliseconds: 300),
@@ -34,14 +34,16 @@ class SplashViewBody extends StatelessWidget {
     );
   }
 
-  Future<Null> navigateHomeView() {
-    return Future.delayed(Duration(seconds: 1), () {
-      Get.to(
-      ()=>  HomeView(),
-        transition: Transition.fadeIn,
-        // curve: Curves.easeInOut,
-        duration: Duration(milliseconds: 500),
-      );
+  Future<Null> navigateHomeView(BuildContext context) async {
+    return Future.delayed(Duration(seconds: 2), () {
+      GoRouter.of(context).push(AppStrings.homeView , );
+      // Get.to(
+      // ()=>  HomeView(),
+      //   transition: Transition.fadeIn,
+      //   // curve: Curves.easeInOut,
+      //   duration: Duration(milliseconds: 500),
+      // );
+      
       // Navigator.pushReplacement(
       //   context,
       //   PageRouteBuilder(
