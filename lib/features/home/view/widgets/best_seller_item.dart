@@ -19,7 +19,7 @@ class BestSellerItem extends StatelessWidget {
         Expanded(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-    
+              
             children: [
               Text(
                 'Harry Potter and the Goblet of Fire',

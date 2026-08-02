@@ -6,7 +6,7 @@ abstract class AppTextStyle {
   static const TextStyle size18WhiteSemiBold = TextStyle(
     fontSize: 18,
     color: AppColors.white,
-    fontWeight: FontWeight.w600,
+    fontWeight: FontWeight.w800,
   );
   static const TextStyle size20WhiteRegular= TextStyle(   
     fontSize: 20,
