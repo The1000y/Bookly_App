@@ -37,7 +37,7 @@ class SplashViewBody extends StatelessWidget {
   Future<Null> navigateHomeView() {
     return Future.delayed(Duration(seconds: 1), () {
       Get.to(
-        HomeView(),
+      ()=>  HomeView(),
         transition: Transition.fadeIn,
         // curve: Curves.easeInOut,
         duration: Duration(milliseconds: 500),

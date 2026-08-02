@@ -13,7 +13,7 @@ class FeatureListViewItemBuilder extends StatelessWidget {
       itemBuilder: (context, index) {
         return Padding(
           padding: const EdgeInsets.only(right: 18),
-          child: FeatureItemListView(),
+          child: FeatureItemListView(width: 0.39,wantIconPlay: true,),
         );
       },
     );
