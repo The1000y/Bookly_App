@@ -1,5 +1,6 @@
 
 import 'package:bookly_app/core/constants/app_colors.dart';
+import 'package:bookly_app/core/constants/app_strings.dart';
 import 'package:flutter/material.dart';
 
 abstract class AppTextStyle {
@@ -13,9 +14,20 @@ abstract class AppTextStyle {
     color: AppColors.white,
     fontWeight: FontWeight.normal,
   );
-  static const TextStyle size14GrayRegular= TextStyle(   
+  static const TextStyle size14WhiteRegular= TextStyle(   
     fontSize: 14,
     color: AppColors.white,
     fontWeight: FontWeight.normal,
+  );
+  static const TextStyle size16WhiteRegular= TextStyle(   
+    fontSize: 16,
+    color: AppColors.white,
+    fontWeight: FontWeight.normal,
+  );
+  static const TextStyle size30GrayRegular= TextStyle(   
+    fontSize: 30,
+    color: AppColors.white,
+    fontWeight: FontWeight.normal,
+    fontFamily: AppStrings.appFont,
   );
 }
