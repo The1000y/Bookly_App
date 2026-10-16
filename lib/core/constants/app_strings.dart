@@ -1,4 +1,6 @@
- class AppStrings {
+ import 'package:flutter_dotenv/flutter_dotenv.dart';
+
+class AppStrings {
   AppStrings._();
   static const String appSlogan = 'Get all Book for Free';
   static const String appFont = 'GT Sectra Fine';
@@ -6,4 +8,6 @@
   static const String homeView = '/home';
   static const String detailsView = '/details';
   static const String searchView = '/search';
+  static final apiKey = dotenv.get('key');
+  
 }
