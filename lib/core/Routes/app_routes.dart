@@ -1,6 +1,7 @@
 import 'package:bookly_app/core/constants/app_strings.dart';
-import 'package:bookly_app/features/home/view/details_view.dart';
+import 'package:bookly_app/features/details/view/details_view.dart';
 import 'package:bookly_app/features/home/view/home_view.dart';
+import 'package:bookly_app/features/search/view/seach_view.dart';
 import 'package:bookly_app/features/splash/view/splash_view.dart';
 import 'package:go_router/go_router.dart';
 
@@ -18,6 +19,10 @@ static  final routers = GoRouter(
     GoRoute(
       path: AppStrings.detailsView,
       builder: (context, state) =>DetailsView(),
+    ),
+    GoRoute(
+      path: AppStrings.searchView,
+      builder: (context, state) =>SearchView(),
     ),
   ],
 );

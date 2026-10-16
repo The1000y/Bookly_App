@@ -1,9 +1,9 @@
 import 'package:bookly_app/core/constants/app_text_style.dart';
 import 'package:bookly_app/features/home/view/widgets/custom_details-app_bar.dart';
 import 'package:bookly_app/features/home/view/widgets/feature_item_list.dart';
-import 'package:bookly_app/features/home/view/widgets/price_and_preview_item.dart';
+import 'package:bookly_app/features/details/view/widgets/price_and_preview_item.dart';
 import 'package:bookly_app/features/home/view/widgets/rate_custom.dart';
-import 'package:bookly_app/features/home/view/widgets/similer_;ist_view_items_books.dart';
+import 'package:bookly_app/features/details/view/widgets/similer_list_view_items_books.dart';
 import 'package:flutter/material.dart';
 
 class DetailsViewBody extends StatelessWidget {

@@ -8,12 +8,8 @@ class BestSellerListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-      padding: EdgeInsets.zero,
-      // shrinkWrap: true,
-      physics: NeverScrollableScrollPhysics(),
-      itemCount: 10,
-      itemBuilder: (context, index) {
+    return SliverList(
+      delegate: SliverChildBuilderDelegate((context, index) {
         return Padding(
           padding: const EdgeInsets.only(bottom: 20),
           child: GestureDetector(
@@ -23,7 +19,7 @@ class BestSellerListView extends StatelessWidget {
             child: BestSellerItem(),
           ),
         );
-      },
+      }, childCount: 12),
     );
   }
 }

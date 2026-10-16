@@ -34,20 +34,18 @@ class HomeViewBody extends StatelessWidget {
                       style: AppTextStyle.size18WhiteSemiBold,
                     ),
                   ),
-    
+
                   // SizedBox(height: 20),
                 ],
               ),
             ),
           ]),
         ),
-    
-        SliverFillRemaining(
-          child: Padding(
-            padding: const EdgeInsets.only(left: 30),
-            child: BestSellerListView(),
-          ),
-        ),
+
+        SliverPadding(
+          padding: EdgeInsets.only(left: 16),
+          sliver: BestSellerListView()),
+       
       ],
     );
   }
