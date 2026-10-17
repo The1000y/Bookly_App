@@ -13,23 +13,17 @@ class HomeRepoImple implements HomeRepo {
   Future<Either<Failure, List<BookModel>>> fetchNewsetBooks() async {
     try {
       var data = await apiServices.fetchNewsetBooks(endPoint: 'volumes');
-      // List<BookModel> books = [];
-      // for (var element in data['items']) {
-      //   books.add(BookModel.fromJson(element));
-      // }
-      // return right(books);
       var result = (data['items'] as List).map((element) {
         return BookModel.fromJson(element);
-      },).toList();
+      }).toList();
       return right(result);
-    } on DioException catch (_) {
-      return left(ServerFailure());
-
+    } on DioException catch (e) {
+      return left(ServerFailure.fromDioException(e));
+    } catch (e) {
+      return left(ServerFailure(e.toString()));
     }
   }
 
   @override
-  Future<Either<Failure, List<BookModel>>> fetchFeatureBooks() {
-   
-  }
+  Future<Either<Failure, List<BookModel>>> fetchFeatureBooks() {}
 }
