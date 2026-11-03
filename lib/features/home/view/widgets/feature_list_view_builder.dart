@@ -7,14 +7,13 @@ class FeatureListViewItemBuilder extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-      
       physics: const BouncingScrollPhysics(),
       scrollDirection: Axis.horizontal,
       itemCount: 10,
       itemBuilder: (context, index) {
         return Padding(
           padding: const EdgeInsets.only(right: 18),
-          child: FeatureItemListView(width: 0.39,wantIconPlay: true,),
+          child: FeatureItemListView(width: 0.39, wantIconPlay: true),
         );
       },
     );

@@ -1,4 +1,4 @@
- import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 class AppStrings {
   AppStrings._();
@@ -9,5 +9,4 @@ class AppStrings {
   static const String detailsView = '/details';
   static const String searchView = '/search';
   static final apiKey = dotenv.get('key');
-  
 }

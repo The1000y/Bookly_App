@@ -44,12 +44,11 @@ class DetailsViewBody extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(height: 16  ),
+          SizedBox(height: 16),
           SimillerListViewItemBooks(),
-          SizedBox(height: 16,),  
+          SizedBox(height: 16),
         ],
       ),
     );
   }
 }
-

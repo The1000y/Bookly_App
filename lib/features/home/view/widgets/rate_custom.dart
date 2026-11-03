@@ -4,9 +4,11 @@ import 'package:flutter/material.dart';
 
 class RateCustomWidget extends StatelessWidget {
   const RateCustomWidget({
-    super.key, required this.wantPrice, required this.width,
+    super.key,
+    required this.wantPrice,
+    required this.width,
   });
-  final bool wantPrice ;
+  final bool wantPrice;
   final double width;
 
   @override
@@ -15,13 +17,15 @@ class RateCustomWidget extends StatelessWidget {
       mainAxisSize: MainAxisSize.min,
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-     wantPrice?   Text(
-          '19.99 €',
-          style: AppTextStyle.size20WhiteRegular.copyWith(
-            color: AppColors.white
-          )
-        ):Container(),
-       SizedBox(width: width,),
+        wantPrice
+            ? Text(
+                '19.99 €',
+                style: AppTextStyle.size20WhiteRegular.copyWith(
+                  color: AppColors.white,
+                ),
+              )
+            : Container(),
+        SizedBox(width: width),
         Icon(Icons.star, color: Colors.yellow, size: 20),
         SizedBox(width: 5),
         Text(
@@ -32,12 +36,12 @@ class RateCustomWidget extends StatelessWidget {
         ),
         SizedBox(width: 5),
         Text(
-      '(2390)',
-      style: AppTextStyle.size14WhiteRegular.copyWith(
-        fontWeight: FontWeight.bold,
-        color: AppColors.white.withValues(alpha: 0.7)
-      ),
-    ),
+          '(2390)',
+          style: AppTextStyle.size14WhiteRegular.copyWith(
+            fontWeight: FontWeight.bold,
+            color: AppColors.white.withValues(alpha: 0.7),
+          ),
+        ),
       ],
     );
   }

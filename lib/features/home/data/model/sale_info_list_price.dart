@@ -4,10 +4,7 @@ class SaleInfoListPrice extends Equatable {
   final double? amount;
   final String? currencyCode;
 
-  const SaleInfoListPrice({
-    this.amount,
-    this.currencyCode,
-  });
+  const SaleInfoListPrice({this.amount, this.currencyCode});
 
   factory SaleInfoListPrice.fromJson(Map<String, dynamic> json) =>
       SaleInfoListPrice(
@@ -16,9 +13,9 @@ class SaleInfoListPrice extends Equatable {
       );
 
   Map<String, dynamic> toJson() => {
-        "amount": amount,
-        "currencyCode": currencyCode,
-      };
+    "amount": amount,
+    "currencyCode": currencyCode,
+  };
 
   @override
   List<Object?> get props => [amount, currencyCode];

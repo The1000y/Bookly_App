@@ -8,11 +8,14 @@ sealed class FeatureBooksState extends Equatable {
 }
 
 final class FeatureBooksInitial extends FeatureBooksState {}
+
 final class FeatureBooksLoading extends FeatureBooksState {}
+
 final class FeatureBooksSuccess extends FeatureBooksState {
   final List<BookModel> books;
   const FeatureBooksSuccess(this.books);
 }
+
 final class FeatureBooksFailure extends FeatureBooksState {
   final String errMessage;
   const FeatureBooksFailure(this.errMessage);

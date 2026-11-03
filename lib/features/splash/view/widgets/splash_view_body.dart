@@ -36,14 +36,14 @@ class SplashViewBody extends StatelessWidget {
 
   Future<Null> navigateHomeView(BuildContext context) async {
     return Future.delayed(Duration(seconds: 2), () {
-      GoRouter.of(context).push(AppStrings.homeView , );
+      GoRouter.of(context).push(AppStrings.homeView);
       // Get.to(
       // ()=>  HomeView(),
       //   transition: Transition.fadeIn,
       //   // curve: Curves.easeInOut,
       //   duration: Duration(milliseconds: 500),
       // );
-      
+
       // Navigator.pushReplacement(
       //   context,
       //   PageRouteBuilder(

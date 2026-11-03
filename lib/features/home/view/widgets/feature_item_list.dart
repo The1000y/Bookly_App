@@ -29,7 +29,7 @@ class FeatureItemListView extends StatelessWidget {
         alignment: Alignment.bottomRight,
         child: Padding(
           padding: const EdgeInsets.all(22.0),
-          child:wantIconPlay? CustomPlayButton(): null,
+          child: wantIconPlay ? CustomPlayButton() : null,
         ),
       ),
     );

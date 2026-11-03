@@ -18,7 +18,10 @@ class ServerFailure extends Failure {
         return ServerFailure('Bad certificate with API server');
       case DioExceptionType.badResponse:
         if (dioException.response != null) {
-          return ServerFailure.fromResponce(dioException.response!.statusCode!, dioException.response!.data);
+          return ServerFailure.fromResponce(
+            dioException.response!.statusCode!,
+            dioException.response!.data,
+          );
         } else {
           return ServerFailure('Unexpected error with API server');
         }
@@ -34,7 +37,7 @@ class ServerFailure extends Failure {
   }
 
   factory ServerFailure.fromResponce(
-     int statusCode,
+    int statusCode,
     Map<String, dynamic> messageError,
   ) {
     switch (statusCode) {
@@ -51,7 +54,6 @@ class ServerFailure extends Failure {
       default:
         return ServerFailure(messageError["error"]["message"]);
     }
-
   }
 }
 

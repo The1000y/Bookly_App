@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-void main() async{
+void main() async {
   await dotenv.load();
   runApp(const BooklyApp());
 }

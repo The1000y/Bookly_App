@@ -51,94 +51,98 @@ class VolumeInfo extends Equatable {
   });
 
   factory VolumeInfo.fromJson(Map<String, dynamic> json) => VolumeInfo(
-        title: json["title"],
-        subtitle: json["subtitle"],
-        authors: json["authors"] == null
-            ? []
-            : List<String>.from(json["authors"]!.map((x) => x)),
-        publisher: json["publisher"],
-        publishedDate: json["publishedDate"] == null
-            ? null
-            : DateTime.parse(json["publishedDate"]),
-        description: json["description"],
-        industryIdentifiers: json["industryIdentifiers"] == null
-            ? []
-            : List<IndustryIdentifier>.from(
-                json["industryIdentifiers"]!
-                    .map((x) => IndustryIdentifier.fromJson(x)),
-              ),
-        readingModes: json["readingModes"] == null
-            ? null
-            : ReadingModes.fromJson(json["readingModes"]),
-        pageCount: json["pageCount"],
-        printType: json["printType"],
-        categories: json["categories"] == null
-            ? []
-            : List<String>.from(json["categories"]!.map((x) => x)),
-        maturityRating: json["maturityRating"],
-        allowAnonLogging: json["allowAnonLogging"],
-        contentVersion: json["contentVersion"],
-        panelizationSummary: json["panelizationSummary"] == null
-            ? null
-            : PanelizationSummary.fromJson(json["panelizationSummary"]),
-        imageLinks: json["imageLinks"] == null
-            ? null
-            : ImageLinks.fromJson(json["imageLinks"]),
-        language: json["language"],
-        previewLink: json["previewLink"],
-        infoLink: json["infoLink"],
-        canonicalVolumeLink: json["canonicalVolumeLink"],
-      );
+    title: json["title"],
+    subtitle: json["subtitle"],
+    authors: json["authors"] == null
+        ? []
+        : List<String>.from(json["authors"]!.map((x) => x)),
+    publisher: json["publisher"],
+    publishedDate: json["publishedDate"] == null
+        ? null
+        : DateTime.parse(json["publishedDate"]),
+    description: json["description"],
+    industryIdentifiers: json["industryIdentifiers"] == null
+        ? []
+        : List<IndustryIdentifier>.from(
+            json["industryIdentifiers"]!.map(
+              (x) => IndustryIdentifier.fromJson(x),
+            ),
+          ),
+    readingModes: json["readingModes"] == null
+        ? null
+        : ReadingModes.fromJson(json["readingModes"]),
+    pageCount: json["pageCount"],
+    printType: json["printType"],
+    categories: json["categories"] == null
+        ? []
+        : List<String>.from(json["categories"]!.map((x) => x)),
+    maturityRating: json["maturityRating"],
+    allowAnonLogging: json["allowAnonLogging"],
+    contentVersion: json["contentVersion"],
+    panelizationSummary: json["panelizationSummary"] == null
+        ? null
+        : PanelizationSummary.fromJson(json["panelizationSummary"]),
+    imageLinks: json["imageLinks"] == null
+        ? null
+        : ImageLinks.fromJson(json["imageLinks"]),
+    language: json["language"],
+    previewLink: json["previewLink"],
+    infoLink: json["infoLink"],
+    canonicalVolumeLink: json["canonicalVolumeLink"],
+  );
 
   Map<String, dynamic> toJson() => {
-        "title": title,
-        "subtitle": subtitle,
-        "authors": authors == null ? [] : List<dynamic>.from(authors!.map((x) => x)),
-        "publisher": publisher,
-        "publishedDate": publishedDate == null
-            ? null
-            : "${publishedDate!.year.toString().padLeft(4, '0')}-${publishedDate!.month.toString().padLeft(2, '0')}-${publishedDate!.day.toString().padLeft(2, '0')}",
-        "description": description,
-        "industryIdentifiers": industryIdentifiers == null
-            ? []
-            : List<dynamic>.from(industryIdentifiers!.map((x) => x.toJson())),
-        "readingModes": readingModes?.toJson(),
-        "pageCount": pageCount,
-        "printType": printType,
-        "categories":
-            categories == null ? [] : List<dynamic>.from(categories!.map((x) => x)),
-        "maturityRating": maturityRating,
-        "allowAnonLogging": allowAnonLogging,
-        "contentVersion": contentVersion,
-        "panelizationSummary": panelizationSummary?.toJson(),
-        "imageLinks": imageLinks?.toJson(),
-        "language": language,
-        "previewLink": previewLink,
-        "infoLink": infoLink,
-        "canonicalVolumeLink": canonicalVolumeLink,
-      };
+    "title": title,
+    "subtitle": subtitle,
+    "authors": authors == null
+        ? []
+        : List<dynamic>.from(authors!.map((x) => x)),
+    "publisher": publisher,
+    "publishedDate": publishedDate == null
+        ? null
+        : "${publishedDate!.year.toString().padLeft(4, '0')}-${publishedDate!.month.toString().padLeft(2, '0')}-${publishedDate!.day.toString().padLeft(2, '0')}",
+    "description": description,
+    "industryIdentifiers": industryIdentifiers == null
+        ? []
+        : List<dynamic>.from(industryIdentifiers!.map((x) => x.toJson())),
+    "readingModes": readingModes?.toJson(),
+    "pageCount": pageCount,
+    "printType": printType,
+    "categories": categories == null
+        ? []
+        : List<dynamic>.from(categories!.map((x) => x)),
+    "maturityRating": maturityRating,
+    "allowAnonLogging": allowAnonLogging,
+    "contentVersion": contentVersion,
+    "panelizationSummary": panelizationSummary?.toJson(),
+    "imageLinks": imageLinks?.toJson(),
+    "language": language,
+    "previewLink": previewLink,
+    "infoLink": infoLink,
+    "canonicalVolumeLink": canonicalVolumeLink,
+  };
 
   @override
   List<Object?> get props => [
-        title,
-        subtitle,
-        authors,
-        publisher,
-        publishedDate,
-        description,
-        industryIdentifiers,
-        readingModes,
-        pageCount,
-        printType,
-        categories,
-        maturityRating,
-        allowAnonLogging,
-        contentVersion,
-        panelizationSummary,
-        imageLinks,
-        language,
-        previewLink,
-        infoLink,
-        canonicalVolumeLink,
-      ];
+    title,
+    subtitle,
+    authors,
+    publisher,
+    publishedDate,
+    description,
+    industryIdentifiers,
+    readingModes,
+    pageCount,
+    printType,
+    categories,
+    maturityRating,
+    allowAnonLogging,
+    contentVersion,
+    panelizationSummary,
+    imageLinks,
+    language,
+    previewLink,
+    infoLink,
+    canonicalVolumeLink,
+  ];
 }

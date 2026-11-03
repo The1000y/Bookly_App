@@ -10,7 +10,7 @@ class HomeRepoImple implements HomeRepo {
   HomeRepoImple(this.apiServices);
 
   @override
-  Future<Either<Failure, List<BookModel>>> fetchNewsetBooks() async {
+  Future<Either<Failure, List<BookModel>>> fetchNewestBooks() async {
     try {
       var data = await apiServices.fetchNewsetBooks(endPoint: 'volumes');
       var result = (data['items'] as List).map((element) {
@@ -24,5 +24,18 @@ class HomeRepoImple implements HomeRepo {
     }
   }
 
-
+  @override
+  Future<Either<Failure, List<BookModel>>> fetchFeatureBooks() async {
+    try {
+      var result = await apiServices.fetchFeatureBooks(endPoint: 'volumes');
+      var books = (result['items'] as List).map((e) {
+        return BookModel.fromJson(e);
+      }).toList();
+      return right(books);
+    } on DioException catch (e) {
+      return left(ServerFailure.fromDioException(e));
+    } catch (e) {
+      return left(ServerFailure(e.toString()));
+    }
+  }
 }

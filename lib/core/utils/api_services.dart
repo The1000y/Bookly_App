@@ -23,4 +23,20 @@ class ApiServices {
     // return BookModel.fromJson(responce.data);
     return responce.data;
   }
+
+  Future<Map<String, dynamic>> fetchFeatureBooks({
+    required String endPoint,
+  }) async {
+    Map<String, dynamic> queryParameters = {
+      'q': 'Programming',
+      'key': AppStrings.apiKey,
+    };
+
+    var responce = await _dio.get(
+      '$_baseUrl$endPoint',
+      queryParameters: queryParameters,
+    );
+    // return BookModel.fromJson(responce.data);
+    return responce.data;
+  }
 }
