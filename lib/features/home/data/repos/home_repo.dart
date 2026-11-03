@@ -5,7 +5,7 @@ import 'package:fpdart/fpdart.dart';
 abstract interface class HomeRepo {
 
 
- Future<Either<Failure,List<BookModel>>> fetchFeatureBooks();
+//  Future<Either<Failure,List<BookModel>>> fetchFeatureBooks();
  Future<Either<Failure,List<BookModel>>>  fetchNewsetBooks();
  
 

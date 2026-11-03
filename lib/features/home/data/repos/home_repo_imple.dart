@@ -24,6 +24,5 @@ class HomeRepoImple implements HomeRepo {
     }
   }
 
-  @override
-  Future<Either<Failure, List<BookModel>>> fetchFeatureBooks() {}
+
 }
