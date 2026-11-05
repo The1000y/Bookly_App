@@ -10,7 +10,7 @@ class VolumeInfo extends Equatable {
   final String? subtitle;
   final List<String>? authors;
   final String? publisher;
-  final DateTime? publishedDate;
+  final String? publishedDate;
   final String? description;
   final List<IndustryIdentifier>? industryIdentifiers;
   final ReadingModes? readingModes;
@@ -57,9 +57,7 @@ class VolumeInfo extends Equatable {
         ? []
         : List<String>.from(json["authors"]!.map((x) => x)),
     publisher: json["publisher"],
-    publishedDate: json["publishedDate"] == null
-        ? null
-        : DateTime.parse(json["publishedDate"]),
+    publishedDate: json["publishedDate"],
     description: json["description"],
     industryIdentifiers: json["industryIdentifiers"] == null
         ? []
@@ -98,10 +96,8 @@ class VolumeInfo extends Equatable {
         ? []
         : List<dynamic>.from(authors!.map((x) => x)),
     "publisher": publisher,
-    "publishedDate": publishedDate == null
-        ? null
-        : "${publishedDate!.year.toString().padLeft(4, '0')}-${publishedDate!.month.toString().padLeft(2, '0')}-${publishedDate!.day.toString().padLeft(2, '0')}",
-    "description": description,
+    "publishedDate": publishedDate,
+     "description": description,
     "industryIdentifiers": industryIdentifiers == null
         ? []
         : List<dynamic>.from(industryIdentifiers!.map((x) => x.toJson())),

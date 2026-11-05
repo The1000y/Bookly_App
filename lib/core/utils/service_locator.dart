@@ -7,8 +7,8 @@ import 'package:get_it/get_it.dart';
 final getIt = GetIt.instance;
 
 void configureDependencies() {
+  getIt.registerSingleton<ApiServices>(ApiServices(Dio()));
   getIt.registerSingleton<HomeRepoImple>(
     HomeRepoImple(getIt.get<ApiServices>()),
   );
-  getIt.registerSingleton<ApiServices>(ApiServices(Dio()));
 }
