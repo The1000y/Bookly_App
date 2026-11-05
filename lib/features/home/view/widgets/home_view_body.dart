@@ -24,6 +24,7 @@ class HomeViewBody extends StatelessWidget {
                   SizedBox(height: 45),
                   SizedBox(
                     height: MediaQuery.of(context).size.height * 0.26,
+                    //fetch featured books from api and display them in a list view
                     child: FeatureListViewItemBuilder(),
                   ),
                   SizedBox(height: 50),
@@ -44,6 +45,7 @@ class HomeViewBody extends StatelessWidget {
 
         SliverPadding(
           padding: EdgeInsets.only(left: 16),
+          //fetch  newest books from api and display them in a list view
           sliver: BestSellerListView(),
         ),
       ],
